@@ -1,0 +1,23 @@
+Bundle-Name: Pipes Tinkerforge Package
+Bundle-Description: contains modules for Tinkerforge sensors and actors
+Bundle-Version: 1.0.0
+Bundle-SymbolicName: org.ws4d.pipes.packages.tinkerforge
+Bundle-Activator: org.ws4d.pipes.modules.tinkerforge.Activator
+Bundle-ClassPath: .,Tinkerforge.jar
+Bundle-Category: pipes.package
+Import-Package: 
+ org.json,
+ org.osgi.framework,
+ org.ws4d.pipes.core,
+ org.ws4d.pipes.pipe,
+ org.ws4d.pipes.bundle,
+ org.ws4d.pipes.bundle.annotation,
+ org.ws4d.pipes.module,
+ org.ws4d.pipes.module.annotation,
+ org.ws4d.pipes.values,
+ org.ws4d.df.api.comp,
+ org.ws4d.df.api.comp.type,
+ org.ws4d.df.api.data,
+ org.ws4d.df.api.exception,
+ org.osgi.service.event
+Export-Package: org.ws4d.pipes.modules.tinkerforge
