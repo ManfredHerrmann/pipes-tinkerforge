@@ -1,22 +1,18 @@
 /**
- * PipesBox Tinkerforge Package - contains modules for Tinkerforge sensors 
- *                                and actors
- * Copyright (C) 2013 PipesBox UG (haftungsbeschränkt)
- * 
- * PipesBox Tinkerforge Package is free software: you can redistribute it and/or
- * modify it under the terms of the GNU Lesser Public License as published by
- * the Free Software Foundation, either version 3 of the License, or (at your 
- * option) any later version.
+ * Copyright (C) 2013 PipesBox UG (haftungsbeschränkt) (elmar.zeeb@pipesbox.de)
  *
- * PipesBox Tinkerforge Package is distributed in the hope that it will be 
- * useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser 
- * Public License for more details.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * A full text copy of the GNU Lesser Public License can be found in 
- * COPYING.LESSER. If not, see <http://www.gnu.org/licenses/>.
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
-
 package org.ws4d.pipes.modules.tinkerforge;
 
 import java.util.logging.Level;
@@ -25,7 +21,6 @@ import org.ws4d.pipes.module.annotation.InPort;
 import org.ws4d.pipes.module.annotation.Module;
 import org.ws4d.pipes.module.annotation.OutPort;
 import org.ws4d.pipes.modules.tinkerforge.daemon.BaseBrickletRequestModule;
-import org.ws4d.pipes.modules.tinkerforge.daemon.ConnectionManager;
 
 import com.tinkerforge.BrickletAnalogIn;
 
