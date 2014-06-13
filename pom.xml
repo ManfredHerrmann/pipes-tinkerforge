@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.ws4d.pipes.packages</groupId>
+	<artifactId>tinkerforge</artifactId>
+	<version>1.3.0</version>
+	<packaging>bundle</packaging>
+
+	<properties>
+		<bundle.activator>org.ws4d.pipes.modules.tinkerforge.Activator</bundle.activator>
+		<bundle.exports>org.ws4d.pipes.modules.tinkerforge</bundle.exports>
+		<bundle.private>org.ws4d.pipes.modules.tinkerforge.*,com.tinkerforge.*</bundle.private>
+		<java.version>1.6</java.version>
+	</properties>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>2.3.7</version>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Export-Package>${bundle.exports}</Export-Package>
+						<Private-Package>${bundle.private}</Private-Package>
+						<Bundle-Activator>${bundle.activator}</Bundle-Activator>
+						<WebRoot>${bundle.webroot}</WebRoot>
+						<AppLabel>${bundle.label}</AppLabel>
+						<Include-Resource>
+							{maven-resources},
+							webroot=src/main/webapp,
+						</Include-Resource>
+						<Import-Package>!org.apache.avalon.framework.logger,!org.apache.log,!org.apache.log4j,*</Import-Package>
+						<Embed-Dependency>*;scope=compile|runtime;inline=true</Embed-Dependency>
+					</instructions>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.ws4d.pipes</groupId>
+			<artifactId>pipes-core</artifactId>
+			<version>1.4.2</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+</project>
